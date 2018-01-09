@@ -1,0 +1,276 @@
+/* --- Clearfix --- */
+
+.group::before,
+.group::after {
+  content: "";
+  display: table;
+}
+
+.group::after {
+  clear: both;
+}
+
+.group {
+  clear: both;
+}
+
+/* --- Styles --- */
+
+body {
+  margin: 8px;
+}
+
+pre {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+}
+
+code {
+  font-family: monospace;
+}
+
+#lesson {
+  width: 1000px;
+  padding: 20px;
+  margin: 0 auto;
+  border: 2px solid #999;
+  background-color: #fff;
+  font: 16px Helvetica, Arial, sans-serif;
+  color: #545459;
+}
+
+#lesson * {
+  box-sizing: border-box;
+}
+
+#lesson .wrapper {
+  margin-bottom: 35px;
+}
+
+#lesson section h1,
+#lesson section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ce4a4a;
+  margin: 20px 0;
+}
+
+#lesson section p {
+  line-height: 35px;
+  margin-bottom: 25px;
+}
+
+#lesson section a {
+  text-decoration: none;
+  color: #333;
+}
+
+#lesson section p.bold {
+  font-weight: bold;
+}
+
+#lesson section .border {
+  width: 650px;
+  border: 2px dashed #555;
+  padding: 30px;
+  margin: 45px;
+}
+
+#lesson section .inline-margin a {
+  margin: 30px;
+}
+
+#lesson section .inline-padding a {
+  padding: 30px;
+  background-color: green;
+  color: white;
+}
+
+#lesson section .inline-float a {
+  float: left;
+  text-align: center;
+  width: 120px;
+  padding: 25px;
+  margin: 15px;
+  background-color: green;
+  color: white;
+  border: 3px solid darkgreen;
+}
+
+#lesson .block .box-1 {
+  background: dodgerblue;
+  color: #fff;
+}
+
+#lesson .block .box-2 {
+  background-color: green;
+  color: #fff;
+  height: 60px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid green;
+}
+
+#lesson .block .box-3 {
+  background-color: tomato;
+  color: #fff;
+  width: 90px;
+}
+
+#lesson .block .fl-1 {
+  float: left;
+  background-color: dodgerblue;
+  color: #fff;
+  border: 1px solid red;
+}
+
+#lesson .block .fl-2 {
+  float: right;
+  background-color: tomato;
+  color: #fff;
+  border: 1px solid red;
+}
+
+#lesson .block .fl-3 {
+  float: left;
+  width: 400px;
+  height: 70px;
+  background-color: tomato;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+}
+
+#lesson .block .fl-4 {
+  float: right;
+  width: 500px;
+  height: 70px;
+  background-color: dodgerblue;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+}
+
+#lesson .block a.bl {
+  display: block;
+  background-color: dodgerblue;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+#lesson .in-bl .nav {
+  text-align: center;
+}
+
+#lesson .in-bl .nav a {
+  display: inline-block;
+  width: 180px;
+  background-color: dodgerblue;
+  color: white;
+  padding: 20px 30px;
+  border: 1px solid #1b95e0;
+  margin: 20px 8px 25px 8px;
+}
+
+#lesson .in-bl::after {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 30px;
+  border-bottom: 2px dashed #545459;
+}
+
+#lesson .pos-fl h1 {
+  text-align: center;
+  margin: 30px 0 25px 0;
+}
+
+#lesson .pos-fl .flbx-1 {
+  width: 450px;
+  height: 100px;
+  float: left;
+  line-height: 100px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background: tomato;
+}
+
+#lesson .pos-fl .flbx-2 {
+  width: 505px;
+  height: 100px;
+  float: left;
+  line-height: 100px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background: dodgerblue;
+}
+
+#lesson .pos-fl .flbx-3 {
+  clear: both;
+  width: 955px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background: seagreen;
+}
+
+#lesson .pos ul {
+  list-style-type: disc;
+  margin: 0 0 45px 40px;
+}
+
+#lesson .pos ul li {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+#lesson .pos-fixed .fixed {
+  position: fixed;
+  left: 35px;
+  bottom: 50px;
+  top: auto;
+  width: 225px;
+  text-align: center;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 10px;
+  padding: 25px 35px;
+}
+
+#lesson .pos-relative .rel-box {
+  position: relative;
+  right: 90px;
+  bottom: -45px;
+  width: 325px;
+  text-align: center;
+  background-color: tomato;
+  color: white;
+  border-radius: 10px;
+  padding: 25px 35px;
+  margin-bottom: 30px;
+}
+
+#lesson .pos-absolute {
+  position: relative;
+}
+
+#lesson .pos-absolute .abs-box1 {
+  position: absolute;
+  width: 200px;
+  top: -30px;
+  left: 230px;
+  text-align: center;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 25px 35px;
+  margin-bottom: 30px;
+}
